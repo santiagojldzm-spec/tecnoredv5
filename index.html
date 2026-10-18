@@ -70,23 +70,31 @@
 <section class="page active" id="page-inicio">
 
   <!-- HERO STAGE CON BURBUJA IRIDISCENTE GIGANTE Y ESCENARIO 3D -->
-  <div class="hero">
+  <!-- HERO STAGE ESTILO MONOPO SAIGON CON COLORES BASE TECNORED -->
+  <div class="hero" id="monopo-hero">
     <div class="hero-bg" aria-hidden="true">
-      <div class="iridescent-bubble bubble-primary"></div>
-      <div class="iridescent-bubble bubble-secondary"></div>
-      <div class="iridescent-bubble bubble-tertiary"></div>
-      <div class="hero-particle-mesh"></div>
+      <!-- Lavado atmosférico de fondo en tonos base TecnoRed -->
+      <div class="monopo-wash wash-1"></div>
+      <div class="monopo-wash wash-2"></div>
+
+      <!-- LA GRAN ESFERA DE CRISTAL LÍQUIDO (Estilo monopo saigon) -->
+      <div class="monopo-sphere-stage" id="monopo-sphere">
+        <div class="monopo-sphere-glass">
+          <div class="sphere-internal-plasma plasma-a"></div>
+          <div class="sphere-internal-plasma plasma-b"></div>
+          <div class="sphere-internal-Shadow"></div>
+          <div class="sphere-rim-specular"></div>
+        </div>
+      </div>
+
+      <!-- Textura de grano cinematográfico sutil -->
+      <div class="monopo-film-grain"></div>
     </div>
 
     <div class="hero-inner container">
       <div class="hero-content reveal-on-scroll">
-        <div class="hero-eyebrow">
-          <span class="eyebrow-dot"></span>
-          <span>INFOMATRIX · SOLACYT · IBEROCIENCIAS · 2026</span>
-        </div>
         <h1 class="hero-title">
-          La tecnología,<br/>
-          <span class="hero-title-accent">para todos.</span>
+          La tecnología, <span class="hero-title-italic">para todos.</span>
         </h1>
         <p class="hero-desc">TecnoRed es una plataforma de inclusión digital e inteligencia artificial diseñada para comunidades rurales y personas con baja alfabetización tecnológica. Aprender no debería tener barreras.</p>
         <div class="hero-actions">
@@ -110,6 +118,78 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Indicador rotatorio inferior izquierdo estilo monopo saigon -->
+    <div class="scroll-badge-wrap" aria-hidden="true">
+      <svg class="scroll-badge-svg" viewBox="0 0 100 100" width="88" height="88">
+        <defs>
+          <path id="circlePath" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"/>
+        </defs>
+        <text font-size="8.2" font-weight="500" letter-spacing="2.8">
+          <textPath href="#circlePath">SCROLL DOWN · TECNORED · </textPath>
+        </text>
+      </svg>
+      <span class="scroll-badge-arrow">∞</span>
+    </div>
+  </div>
+
+  <!-- VISTA PREVIA INTERACTIVA (Módulo "Uso seguro de Internet" movido más abajo) -->
+  <section class="section-band showcase-band">
+    <div class="container">
+      <div class="showcase-split">
+        <div class="showcase-text reveal-on-scroll">
+          <div class="section-label">Experiencia guiada</div>
+          <h2 class="section-heading">Diseñado para aprender paso a paso desde tu celular</h2>
+          <p class="section-sub">Cada módulo simula situaciones reales —como identificar sitios web seguros o conectarte a una red WiFi— con botones claros y asistencia de voz en todo momento.</p>
+          <div class="showcase-Perks">
+            <div class="sp-item">
+              <span class="sp-dot"></span>
+              <span>Simuladores prácticos sin riesgo de equivocarse</span>
+            </div>
+            <div class="sp-item">
+              <span class="sp-dot"></span>
+              <span>Adaptado tanto para teléfonos Android como iPhone</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-on-scroll" aria-hidden="true">
+          <div class="stage-3d-wrapper" id="hero-3d-tilt">
+            <div class="stage-3d-glow"></div>
+            <div class="device-frame-3d">
+              <div class="device-island"></div>
+              <div class="device-screen">
+                <div class="device-ui">
+                  <div class="dui-header">
+                    <div class="dui-dot"></div>
+                    <span>Módulo interactivo activo</span>
+                  </div>
+                  <div class="dui-icon-orb">🌐</div>
+                  <div class="dui-title">Uso seguro de Internet</div>
+                  <div class="dui-progress-track">
+                    <div class="dui-progress-fill"></div>
+                  </div>
+                  <div class="dui-step-pills">
+                    <span class="dui-pill done">✓ Paso 1: ¿Qué es la red?</span>
+                    <span class="dui-pill done">✓ Paso 2: Buscar en Google</span>
+                    <span class="dui-pill active">→ Paso 3: Candado HTTPS</span>
+                  </div>
+                </div>
+              </div>
+              <div class="device-reflection"></div>
+            </div>
+            <div class="floating-badge fb-top">
+              <span class="fb-dot green"></span> Voz integrada activa
+            </div>
+            <div class="floating-badge fb-bottom">
+              <span class="fb-dot blue"></span> Android &amp; iOS
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
       <!-- ANIMACIÓN 3D INICIO: HARDWARE MOCKUP + BURBUJA Y TARJETAS FLOTANTES -->
       <div class="hero-visual reveal-on-scroll" aria-hidden="true">
