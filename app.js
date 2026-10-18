@@ -303,7 +303,23 @@ function initScrollReveal() {
 /* ══════════════════════════════════════
    INTERACCIÓN 3D SUAVE EN ESCENARIOS
 ══════════════════════════════════════ */
-function init3DTilt() {
+unction init3DTilt() {
+  /* Paralaje fluido de la gran esfera estilo monopo saigon en el Hero */
+  const hero = document.getElementById('monopo-hero');
+  const sphere = document.getElementById('monopo-sphere');
+  if (hero && sphere) {
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      sphere.style.transform = `translate3d(${x * -36}px, ${y * -28}px, 0)`;
+    });
+    hero.addEventListener('mouseleave', () => {
+      sphere.style.transform = 'translate3d(0, 0, 0)';
+    });
+  }
+
+  /* Inclinación 3D en el teléfono y el globo de impacto */
   const stages = [
     document.getElementById('hero-3d-tilt'),
     document.getElementById('impact-3d-tilt')
@@ -321,7 +337,6 @@ function init3DTilt() {
     });
   });
 }
-
 /* ══════════════════════════════════════
    NAVEGACIÓN SPA
 ══════════════════════════════════════ */
