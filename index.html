@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-font-size="medium">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="TecnoRed — Plataforma de inclusión digital e Inteligencia Artificial para comunidades rurales e Iberoamérica."/>
+  <title>TecnoRed — Inclusión Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,300;1,14..32,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- BARRA DE ACCESIBILIDAD -->
+<div class="a11y-bar" role="toolbar" aria-label="Herramientas de accesibilidad">
+  <button class="a11y-btn" id="btn-tts" aria-pressed="false" title="Lectura en voz alta">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+    <span class="a11y-label">Voz</span>
+  </button>
+  <button class="a11y-btn" id="btn-font-dec" aria-label="Reducir texto">
+    <span style="font-size:.75rem;font-weight:700">A−</span>
+  </button>
+  <button class="a11y-btn" id="btn-font-inc" aria-label="Aumentar texto">
+    <span style="font-size:.75rem;font-weight:700">A+</span>
+  </button>
+  <button class="a11y-btn" id="btn-theme" aria-pressed="true" title="Cambiar tema">
+    <span class="a11y-icon" id="theme-icon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </span>
+    <span class="a11y-label">Tema</span>
+  </button>
+  <button class="a11y-btn" id="btn-contrast" aria-pressed="false" title="Alto contraste">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20" opacity=".3"/><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor" stroke="none"/></svg>
+    <span class="a11y-label">Contraste</span>
+  </button>
+</div>
+
+<!-- NAVEGACIÓN PRINCIPAL -->
+<header class="site-header" role="banner">
+  <nav class="nav-main" aria-label="Navegación principal">
+    <a href="#" class="nav-logo" data-page="inicio" aria-label="TecnoRed — Inicio">
+      <div class="logo-mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <span class="logo-text">TecnoRed</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li><a class="nav-link active" data-page="inicio" href="#inicio">Inicio</a></li>
+      <li><a class="nav-link" data-page="proyecto" href="#proyecto">Proyecto</a></li>
+      <li><a class="nav-link" data-page="plataforma" href="#plataforma">Aprende</a></li>
+      <li><a class="nav-link" data-page="emergencias" href="#emergencias">Emergencias</a></li>
+      <li><a class="nav-link" data-page="equipo" href="#equipo">Equipo</a></li>
+      <li><a class="nav-link" data-page="impacto" href="#impacto">Impacto</a></li>
+      <li>
+        <a class="nav-link nav-ia-link" data-page="ia" href="#ia">
+          <span class="ia-sparkle" aria-hidden="true">✦</span> TecnoRed IA
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content" role="main">
+
+<!-- ════════════════ 1. INICIO ════════════════ -->
+<section class="page active" id="page-inicio">
+
+  <!-- HERO STAGE ESTILO MONOPO SAIGON CON COLORES BASE TECNORED -->
+  <div class="hero" id="monopo-hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="monopo-wash wash-1"></div>
+      <div class="monopo-wash wash-2"></div>
+
+      <div class="monopo-sphere-stage" id="monopo-sphere">
+        <div class="monopo-sphere-glass">
+          <div class="sphere-internal-plasma plasma-a"></div>
+          <div class="sphere-internal-plasma plasma-b"></div>
+          <div class="sphere-internal-Shadow"></div>
+          <div class="sphere-rim-specular"></div>
+        </div>
+      </div>
+
+      <div class="monopo-film-grain"></div>
+    </div>
+
+    <div class="hero-inner container">
+      <div class="hero-content reveal-on-scroll">
+        <h1 class="hero-title">
+          La tecnología, <span class="hero-title-italic">para todos.</span>
+        </h1>
+        <p class="hero-desc">TecnoRed es una plataforma de inclusión digital e inteligencia artificial diseñada para comunidades rurales y personas con baja alfabetización tecnológica. Aprender no debería tener barreras.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" data-page="plataforma">Comenzar a aprender</button>
+          <button class="btn-secondary" data-page="ia">✦ Consultar a TecnoRed IA</button>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric">
+            <div class="metric-value"><span class="metric-num" data-count="250">0</span><span class="metric-suffix">M+</span></div>
+            <span class="metric-label">personas sin acceso digital</span>
+          </div>
+          <div class="metric-divider" aria-hidden="true"></div>
+          <div class="metric">
+            <div class="metric-value"><span class="metric-num" data-count="7">0</span></div>
+            <span class="metric-label">módulos interactivos</span>
+          </div>
+          <div class="metric-divider" aria-hidden="true"></div>
+          <div class="metric">
+            <div class="metric-value"><span class="metric-num" data-count="12">0</span></div>
+            <span class="metric-label">emergencias resueltas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-badge-wrap" aria-hidden="true">
+      <svg class="scroll-badge-svg" viewBox="0 0 100 100" width="88" height="88">
+        <defs>
+          <path id="circlePath" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"/>
+        </defs>
+        <text font-size="8.2" font-weight="500" letter-spacing="2.8">
+          <textPath href="#circlePath">SCROLL DOWN · TECNORED · </textPath>
+        </text>
+      </svg>
+      <span class="scroll-badge-arrow">∞</span>
+    </div>
+  </div>
+
+  <!-- VISTA PREVIA INTERACTIVA (Módulo "Uso seguro de Internet" más abajo) -->
+  <section class="section-band showcase-band">
+    <div class="container">
+      <div class="showcase-split">
+        <div class="showcase-text reveal-on-scroll">
+          <div class="section-label">Experiencia guiada</div>
+          <h2 class="section-heading">Diseñado para aprender paso a paso desde tu celular</h2>
+          <p class="section-sub">Cada módulo simula situaciones reales —como identificar sitios web seguros o conectarte a una red WiFi— con botones claros y asistencia de voz en todo momento.</p>
+          <div class="showcase-Perks">
+            <div class="sp-item">
+              <span class="sp-dot"></span>
+              <span>Simuladores prácticos sin riesgo de equivocarse</span>
+            </div>
+            <div class="sp-item">
+              <span class="sp-dot"></span>
+              <span>Adaptado tanto para teléfonos Android como iPhone</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-on-scroll" aria-hidden="true">
+          <div class="stage-3d-wrapper" id="hero-3d-tilt">
+            <div class="stage-3d-glow"></div>
+            <div class="device-frame-3d">
+              <div class="device-island"></div>
+              <div class="device-screen">
+                <div class="device-ui">
+                  <div class="dui-header">
+                    <div class="dui-dot"></div>
+                    <span>Módulo interactivo activo</span>
+                  </div>
+                  <div class="dui-icon-orb">🌐</div>
+                  <div class="dui-title">Uso seguro de Internet</div>
+                  <div class="dui-progress-track">
+                    <div class="dui-progress-fill"></div>
+                  </div>
+                  <div class="dui-step-pills">
+                    <span class="dui-pill done">✓ Paso 1: ¿Qué es la red?</span>
+                    <span class="dui-pill done">✓ Paso 2: Buscar en Google</span>
+                    <span class="dui-pill active">→ Paso 3: Candado HTTPS</span>
+                  </div>
+                </div>
+              </div>
+              <div class="device-reflection"></div>
+            </div>
+            <div class="floating-badge fb-top">
+              <span class="fb-dot green"></span> Voz integrada activa
+            </div>
+            <div class="floating-badge fb-bottom">
+              <span class="fb-dot blue"></span> Android &amp; iOS
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="section-band">
+    <div class="container">
+      <div class="section-header-centered reveal-on-scroll">
+        <div class="section-label">El problema que resolvemos</div>
+        <h2 class="section-heading">La brecha digital es una crisis silenciosa</h2>
+        <p class="section-sub">Millones de personas en Iberoamérica están excluidas del mundo digital por falta de educación tecnológica básica.</p>
+      </div>
+      <div class="cards-grid-4">
+        <div class="info-card reveal-on-scroll">
+          <div class="ic-number">01</div>
+          <h3>Zonas rurales aisladas</h3>
+          <p>Millones de familias nunca han navegado por Internet ni accedido a servicios digitales básicos.</p>
+          <div class="ic-tag">+180M afectados</div>
+        </div>
+        <div class="info-card reveal-on-scroll">
+          <div class="ic-number">02</div>
+          <h3>Exclusión educativa</h3>
+          <p>Sin habilidades digitales, las personas pierden acceso a empleos, salud en línea y educación.</p>
+          <div class="ic-tag">40% sin acceso</div>
+        </div>
+        <div class="info-card reveal-on-scroll">
+          <div class="ic-number">03</div>
+          <h3>Vulnerabilidad digital</h3>
+          <p>La falta de educación tecnológica expone a fraudes, desinformación y robo de identidad.</p>
+          <div class="ic-tag">$3.5B perdidos/año</div>
+        </div>
+        <div class="info-card reveal-on-scroll">
+          <div class="ic-number">04</div>
+          <h3>Desigualdad estructural</h3>
+          <p>La brecha digital profundiza la inequidad económica, dejando atrás a los más vulnerables.</p>
+          <div class="ic-tag">ODS 10 en riesgo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISIÓN CON ESFERA ORBITAL 3D -->
+  <section class="section-band alt-surface">
+    <div class="container">
+      <div class="mission-inner">
+        <div class="mission-text reveal-on-scroll">
+          <div class="section-label">Nuestra misión</div>
+          <h2 class="section-heading">Educación digital sin barreras</h2>
+          <p>TecnoRed ofrece tutoriales visuales, simples y en español diseñados para quienes se acercan a la tecnología por primera vez. Sin tecnicismos, sin costos, sin registro.</p>
+          <ul class="feature-list">
+            <li>
+              <div class="fl-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Tutoriales paso a paso en lenguaje sencillo
+            </li>
+            <li>
+              <div class="fl-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Lectura en voz alta integrada en toda la web
+            </li>
+            <li>
+              <div class="fl-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Optimizado para celulares de gama baja
+            </li>
+            <li>
+              <div class="fl-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Módulos diferenciados para iOS y Android
+            </li>
+            <li>
+              <div class="fl-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Centro de 12 emergencias digitales
+            </li>
+            <li>
+              <div class="fl-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Asistente TecnoRed IA 100% gratuito
+            </li>
+          </ul>
+          <button class="btn-primary" data-page="plataforma">Explorar módulos</button>
+        </div>
+
+        <div class="mission-visual reveal-on-scroll" aria-hidden="true">
+          <div class="orbital-plinth">
+            <div class="orbital-3d-scene">
+              <div class="orbit-ring ring-outer"><span>Sociedad</span></div>
+              <div class="orbit-ring ring-mid"><span>Educación</span></div>
+              <div class="orbit-ring ring-tilt-1"></div>
+              <div class="orbit-ring ring-tilt-2"></div>
+              <div class="orbit-core"><span>TecnoRed</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="section-band">
+    <div class="container">
+      <div class="section-header-centered reveal-on-scroll">
+        <div class="section-label">Proceso de aprendizaje</div>
+        <h2 class="section-heading">Así de simple es aprender</h2>
+        <p class="section-sub">Cuatro pasos guiados para dominar cualquier herramienta digital a tu propio ritmo.</p>
+      </div>
+      <div class="steps-row">
+        <div class="step-item reveal-on-scroll">
+          <div class="step-n">PASO 01</div>
+          <h3>Elige un módulo</h3>
+          <p>Selecciona el tema que necesitas aprender. Desde usar el celular hasta evitar fraudes.</p>
+        </div>
+        <div class="step-item reveal-on-scroll">
+          <div class="step-n">PASO 02</div>
+          <h3>Lee o escucha</h3>
+          <p>Sigue los pasos con texto claro o activa la lectura en voz alta si prefieres escuchar.</p>
+        </div>
+        <div class="step-item reveal-on-scroll">
+          <div class="step-n">PASO 03</div>
+          <h3>Practica sin riesgo</h3>
+          <p>Usa las simulaciones interactivas para practicar lo aprendido en un entorno seguro.</p>
+        </div>
+        <div class="step-item reveal-on-scroll">
+          <div class="step-n">PASO 04</div>
+          <h3>Avanza siempre</h3>
+          <p>Tu progreso se guarda automáticamente en tu dispositivo para cuando regreses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section-band alt-surface">
+    <div class="container">
+      <div class="section-header-centered reveal-on-scroll">
+        <div class="section-label">Impacto real</div>
+        <h2 class="section-heading">Lo que dicen quienes aprendieron</h2>
+      </div>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card reveal-on-scroll">
+          <p>"Nunca pensé que podría hacer una videollamada con mis hijos en la ciudad. Ahora los veo todos los domingos."</p>
+          <footer>
+            <strong>Rosa M.</strong>
+            <span>Comunidad rural, Cochabamba</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial-card featured reveal-on-scroll">
+          <p>"Me mandaron un mensaje diciendo que gané un premio. Gracias a TecnoRed lo reconocí como fraude y no hice clic."</p>
+          <footer>
+            <strong>Carlos A.</strong>
+            <span>Agricultor, Santa Cruz</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial-card reveal-on-scroll">
+          <p>"Creé mi correo electrónico siguiendo los pasos. Ahora recibo documentos sin tener que ir al pueblo."</p>
+          <footer>
+            <strong>María T.</strong>
+            <span>Maestra rural, Oruro</span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section-cta">
+    <div class="container">
+      <div class="cta-inner reveal-on-scroll">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <h2>No necesitas saber nada de tecnología para empezar.</h2>
+        <p>TecnoRed te acompaña en cada paso, desde cero, a tu ritmo.</p>
+        <div class="cta-buttons">
+          <button class="btn-primary btn-large" data-page="plataforma">Comenzar ahora</button>
+          <button class="btn-secondary btn-large" data-page="ia">Abrir TecnoRed IA</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ════════════════ 2. PROYECTO ════════════════ -->
+<section class="page" id="page-proyecto">
+  <div class="container">
+    <div class="page-header-block reveal-on-scroll">
+      <div class="section-label">Proyecto científico-tecnológico</div>
+      <h1>TecnoRed: Ciencia, Tecnología<br/>e Impacto Social</h1>
+      <p class="page-lead">Arquitectura educativa e inteligencia artificial accesible diseñada para cerrar la brecha digital en comunidades rurales iberoamericanas.</p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar reveal-on-scroll" style="--pa:#30D158">
+        <div class="pillar-top">
+          <span class="pillar-n">PILAR 01</span>
+          <span class="pillar-dot"></span>
+        </div>
+        <h3>Enfoque Científico</h3>
+        <p>Fundamentado en el Diseño Universal para el Aprendizaje (DUA), reducción de carga cognitiva y metodologías UX adaptadas a poblaciones vulnerables.</p>
+      </div>
+      <div class="pillar reveal-on-scroll" style="--pa:#0A84FF">
+        <div class="pillar-top">
+          <span class="pillar-n">PILAR 02</span>
+          <span class="pillar-dot"></span>
+        </div>
+        <h3>Enfoque Tecnológico</h3>
+        <p>Arquitectura SPA ultraligera en HTML5, CSS3 y JavaScript Vanilla con Web Speech API (TTS) y persistencia en LocalStorage para conexiones lentas.</p>
+      </div>
+      <div class="pillar reveal-on-scroll" style="--pa:#5AC8FA">
+        <div class="pillar-top">
+          <span class="pillar-n">PILAR 03</span>
+          <span class="pillar-dot"></span>
+        </div>
+        <h3>Impacto Social</h3>
+        <p>Orientado a más de 250 millones de personas en Iberoamérica sin alfabetización digital, priorizando zonas rurales y adultos mayores.</p>
+      </div>
+      <div class="pillar reveal-on-scroll" style="--pa:#0A84FF">
+        <div class="pillar-top">
+          <span class="pillar-n">PILAR 04</span>
+          <span class="pillar-dot"></span>
+        </div>
+        <h3>Innovación con IA</h3>
+        <p>Módulos diferenciados para iOS y Android, centro de 12 emergencias digitales y motor de IA conversacional local sin costo ni exposición de API keys.</p>
+      </div>
+      <div class="pillar reveal-on-scroll" style="--pa:#30D158">
+        <div class="pillar-top">
+          <span class="pillar-n">PILAR 05</span>
+          <span class="pillar-dot"></span>
+        </div>
+        <h3>Creatividad Pedagógica</h3>
+        <p>Simulaciones interactivas libres de riesgo, progreso gamificado y lenguaje claro culturalmente adaptado a la realidad latinoamericana.</p>
+      </div>
+      <div class="pillar reveal-on-scroll" style="--pa:#5AC8FA">
+        <div class="pillar-top">
+          <span class="pillar-n">PILAR 06</span>
+          <span class="pillar-dot"></span>
+        </div>
+        <h3>Aporte Global ONU</h3>
+        <p>Contribución directa a los Objetivos de Desarrollo Sostenible (ODS 1, 4, 8, 10 y 17), ofreciendo un modelo replicable y escalable.</p>
+      </div>
+    </div>
+
+    <div class="project-split-layout">
+      <div class="timeline-card-panel reveal-on-scroll">
+        <div class="section-label">Hoja de ruta</div>
+        <h2>Evolución del proyecto</h2>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-marker"></div>
+            <div class="tl-body">
+              <span class="tl-phase">Fase 01 · Investigación</span>
+              <h4>Diagnóstico Comunitario</h4>
+              <p>Revisión bibliográfica e identificación de barreras digitales críticas en comunidades rurales bolivianas.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-marker"></div>
+            <div class="tl-body">
+              <span class="tl-phase">Fase 02 · Experiencia de Usuario</span>
+              <h4>Diseño y Prototipado Accesible</h4>
+              <p>Arquitectura de información, alto contraste, controles tipográficos y validación con usuarios reales.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-marker"></div>
+            <div class="tl-body">
+              <span class="tl-phase">Fase 03 · Ingeniería</span>
+              <h4>Desarrollo SPA + TecnoRed IA</h4>
+              <p>Implementación de módulos iOS/Android, síntesis de voz nativa, centro de emergencias y asistente de IA integrado.</p>
+            </div>
+          </div>
+          <div class="tl-item current">
+            <div class="tl-marker"></div>
+            <div class="tl-body">
+              <span class="tl-phase">Fase 04 · Etapa Actual</span>
+              <h4>Validación y Presentación</h4>
+              <p>Pruebas de impacto y exposición en ferias científicas internacionales 2026.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-right-col">
+        <div class="tech-card-panel reveal-on-scroll">
+          <div class="section-label">Ingeniería de software</div>
+          <h2>Stack Tecnológico</h2>
+          <p class="tech-panel-desc">Diseñado sin dependencias pesadas para cargar instantáneamente incluso en redes móviles 3G rurales.</p>
+          <div class="tech-bento-grid">
+            <div class="tech-bento-item">
+              <strong>HTML5 Semántico</strong>
+              <span>Estructura WAI-ARIA accesible</span>
+            </div>
+            <div class="tech-bento-item">
+              <strong>CSS3 Architecture</strong>
+              <span>Bento Grid + Animaciones 3D</span>
+            </div>
+            <div class="tech-bento-item">
+              <strong>JavaScript ES6+</strong>
+              <span>Motor SPA sin frameworks pesados</span>
+            </div>
+            <div class="tech-bento-item">
+              <strong>Web Speech API</strong>
+              <span>Síntesis de voz en español</span>
+            </div>
+            <div class="tech-bento-item">
+              <strong>Motor TecnoRed IA</strong>
+              <span>Procesamiento local sin API Key</span>
+            </div>
+            <div class="tech-bento-item">
+              <strong>WCAG 2.1 AA</strong>
+              <span>Alto contraste y escala óptica</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="continuation-block reveal-on-scroll">
+          <div class="cb-badge">ACTUALIZACIÓN 2026</div>
+          <h3>Proyecto en Continuación</h3>
+          <p>Esta edición incorpora el nuevo espacio dedicado <strong>TecnoRed IA</strong>, selector inteligente de sistema operativo (iOS/Android), 12 guías de respuesta ante emergencias digitales y visualización tridimensional interactiva.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 3. APRENDE ════════════════ -->
+<section class="page" id="page-plataforma">
+  <div class="container">
+    <div class="page-header-block compact reveal-on-scroll">
+      <div class="section-label">Centro de aprendizaje</div>
+      <h1>¿Qué quieres aprender hoy?</h1>
+      <p class="page-lead">Elige un módulo interactivo y avanza paso a paso, sin prisa y en lenguaje claro.</p>
+    </div>
+
+    <div class="progress-global reveal-on-scroll" id="progress-global">
+      <div class="pg-row">
+        <span class="pg-label">Progreso general del curso</span>
+        <span class="pg-pct" id="pg-pct">0%</span>
+      </div>
+      <div class="pg-track">
+        <div class="pg-fill" id="pg-fill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <div class="modules-grid" id="modules-grid" role="list" aria-label="Módulos de aprendizaje"></div>
+
+    <!-- MODAL MÓDULO -->
+    <div class="module-modal" id="module-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-scrim" id="modal-overlay"></div>
+      <div class="modal-sheet">
+        <div class="modal-handle" aria-hidden="true"></div>
+        <button class="modal-close-btn" id="modal-close" aria-label="Cerrar módulo">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="modal-header">
+          <span class="modal-mod-icon" id="modal-icon"></span>
+          <h2 id="modal-title"></h2>
+        </div>
+        <div class="modal-prog-row">
+          <div class="modal-prog-track"><div class="modal-prog-fill" id="mp-fill"></div></div>
+          <span class="modal-prog-text" id="mp-text">1 / 4</span>
+        </div>
+        <div class="modal-body" id="modal-content"></div>
+        <div class="modal-footer">
+          <button class="btn-ghost-sm" id="btn-prev-step">← Anterior</button>
+          <button class="btn-tts-sm" id="btn-tts-modal" title="Escuchar paso en voz alta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          </button>
+          <button class="btn-primary-sm" id="btn-next-step">Siguiente →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL OS SELECTOR -->
+    <div class="os-modal" id="os-modal" role="dialog" aria-modal="true" hidden>
+      <div class="modal-scrim" id="os-modal-overlay"></div>
+      <div class="os-modal-sheet">
+        <div class="modal-handle" aria-hidden="true"></div>
+        <button class="modal-close-btn" id="os-modal-close" aria-label="Cerrar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="os-modal-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h2 class="os-modal-title">¿Qué tipo de teléfono tienes?</h2>
+        <p class="os-modal-sub">Te mostraremos los botones y pasos exactos según tu dispositivo.</p>
+        <div class="os-options">
+          <button class="os-option-btn" id="os-pick-android">
+            <div class="os-opt-icon" aria-hidden="true">🤖</div>
+            <div class="os-opt-text">
+              <strong>Android</strong>
+              <small>Samsung, Xiaomi, Motorola, Huawei, Honor</small>
+            </div>
+          </button>
+          <button class="os-option-btn" id="os-pick-ios">
+            <div class="os-opt-icon" aria-hidden="true">🍎</div>
+            <div class="os-opt-text">
+              <strong>iPhone (iOS)</strong>
+              <small>Apple iPhone de cualquier generación</small>
+            </div>
+          </button>
+        </div>
+        <div class="os-help-row">
+          <button class="os-help-toggle" id="os-help-toggle-btn">¿No sabes cuál tienes? Toca aquí para identificarlo</button>
+          <div class="os-help-content" id="os-help-info" hidden>
+            <div class="os-help-item">
+              <strong>🤖 Es Android si:</strong> la tienda para bajar aplicaciones se llama <em>Play Store</em> (un triángulo de colores).
+            </div>
+            <div class="os-help-item">
+              <strong>🍎 Es iPhone si:</strong> tiene el dibujo de una manzana en la parte de atrás y su tienda se llama <em>App Store</em> (una letra A azul).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 4. EMERGENCIAS ════════════════ -->
+<section class="page" id="page-emergencias">
+  <div class="emergencias-banner">
+    <div class="container">
+      <div class="section-label light">Respuesta inmediata</div>
+      <h1>¿Algo salió mal?<br/>Te ayudamos paso a paso.</h1>
+      <p>Selecciona tu emergencia tecnológica para ver qué hacer en este momento.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="em-grid" id="em-grid">
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="celular-robado">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">📵</div>
+          <span class="em-urgency urgente">Urgente</span>
+        </div>
+        <h3>Me robaron el celular</h3>
+        <p>Bloquéalo a distancia y protege tus cuentas bancarias y personales.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="contrasena">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">🔐</div>
+          <span class="em-urgency comun">Común</span>
+        </div>
+        <h3>Olvidé mi contraseña</h3>
+        <p>Recupera el acceso a tu correo o redes sociales paso a paso.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="estafado">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">🚨</div>
+          <span class="em-urgency urgente">Urgente</span>
+        </div>
+        <h3>Creo que me estafaron</h3>
+        <p>Qué hacer en los primeros minutos para limitar el daño y denunciar.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="virus">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">🦠</div>
+          <span class="em-urgency tecnico">Técnico</span>
+        </div>
+        <h3>Mi celular tiene virus</h3>
+        <p>Cómo detectar y eliminar aplicaciones maliciosas sin pagar nada.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="internet">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">📡</div>
+          <span class="em-urgency comun">Común</span>
+        </div>
+        <h3>No funciona Internet</h3>
+        <p>Soluciones rápidas para recuperar tu señal de WiFi o datos móviles.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="cuenta-bloqueada">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">🔒</div>
+          <span class="em-urgency comun">Común</span>
+        </div>
+        <h3>Me bloquearon la cuenta</h3>
+        <p>Recupera el acceso a Facebook, Gmail, WhatsApp u otras plataformas.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="fotos-perdidas">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">🖼️</div>
+          <span class="em-urgency importante">Importante</span>
+        </div>
+        <h3>Perdí mis fotos</h3>
+        <p>Cómo restaurar imágenes borradas desde la papelera o la nube.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="llamada-estafa">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">📞</div>
+          <span class="em-urgency urgente">Urgente</span>
+        </div>
+        <h3>Llamada de estafadores</h3>
+        <p>Cómo actuar cuando fingen llamar de tu banco o por un premio falso.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="celular-lento">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">🐌</div>
+          <span class="em-urgency tecnico">Técnico</span>
+        </div>
+        <h3>Mi celular está muy lento</h3>
+        <p>Ajustes seguros para liberar memoria y acelerar tu teléfono.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="bateria">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">🔋</div>
+          <span class="em-urgency comun">Común</span>
+        </div>
+        <h3>La batería dura muy poco</h3>
+        <p>Configuraciones esenciales para duplicar la autonomía diaria.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="whatsapp-bloqueado">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">💬</div>
+          <span class="em-urgency comun">Común</span>
+        </div>
+        <h3>Problemas con WhatsApp</h3>
+        <p>Cuenta suspendida, código SMS o restauración de copias de seguridad.</p>
+      </div>
+      <div class="em-card reveal-on-scroll" tabindex="0" data-em="compra-falsa">
+        <div class="em-card-header">
+          <div class="em-icon-wrap">🛒</div>
+          <span class="em-urgency urgente">Urgente</span>
+        </div>
+        <h3>Hice una compra falsa en línea</h3>
+        <p>Pasos para solicitar contracargo bancario y reportar el fraude.</p>
+      </div>
+    </div>
+
+    <div class="em-panel" id="em-panel" hidden>
+      <button class="em-back-btn" id="em-back-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Volver a todas las emergencias
+      </button>
+      <div id="em-panel-content"></div>
+      <button class="btn-tts-block" id="btn-tts-em">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        Escuchar los pasos en voz alta
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 5. EQUIPO ════════════════ -->
+<section class="page" id="page-equipo">
+  <div class="container">
+    <div class="page-header-block reveal-on-scroll">
+      <div class="section-label">Autoría e institución</div>
+      <h1>El Equipo detrás de TecnoRed</h1>
+      <p class="page-lead">Investigación, desarrollo de software y diseño de experiencia orientados a la inclusión social en Bolivia e Iberoamérica.</p>
+    </div>
+
+    <div class="team-bento-grid">
+      <div class="team-card-solo reveal-on-scroll">
+        <div class="tcs-avatar">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="tcs-info">
+          <span class="tcs-role">Autor Principal · Desarrollador Full-Stack &amp; Investigador UX</span>
+          <h2>Santiago Jacobs</h2>
+          <p>Responsable de la arquitectura técnica de la plataforma, programación de los módulos interactivos, desarrollo del asistente TecnoRed IA y validación pedagógica del proyecto.</p>
+        </div>
+      </div>
+
+      <div class="advisor-card reveal-on-scroll">
+        <div class="adv-avatar">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="adv-info">
+          <span class="adv-role">Docente Asesor · Colegio San Agustín</span>
+          <h3>Mauricio Salinas</h3>
+          <p>Orienta y valida el rigor científico, metodológico y tecnológico del proyecto para su presentación internacional.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="institution-block reveal-on-scroll">
+      <div class="section-label">Ficha institucional</div>
+      <h2>Institución Educativa</h2>
+      <div class="inst-grid-cards">
+        <div class="inst-card-item">
+          <span class="it-key">Institución</span>
+          <strong class="it-val">Colegio San Agustín</strong>
+        </div>
+        <div class="inst-card-item">
+          <span class="it-key">Ubicación</span>
+          <strong class="it-val">Cochabamba — Bolivia, Iberoamérica</strong>
+        </div>
+        <div class="inst-card-item">
+          <span class="it-key">Categoría Oficial</span>
+          <strong class="it-val">Ciencias de la Computación e Informática</strong>
+        </div>
+        <div class="inst-card-item">
+          <span class="it-key">Modalidad</span>
+          <strong class="it-val">Investigación Aplicada y Desarrollo Web</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 6. IMPACTO ════════════════ -->
+<section class="page" id="page-impacto">
+  <div class="container">
+    <div class="impact-hero-split">
+      <div class="impact-hero-text reveal-on-scroll">
+        <div class="section-label">Transformación social medible</div>
+        <h1>Impacto Social<br/>de TecnoRed</h1>
+        <p class="page-lead">De la problemática detectada en comunidades rurales a una solución tecnológica abierta que conecta familias, previene fraudes y democratiza el conocimiento.</p>
+        <div class="impact-numbers">
+          <div class="in-item">
+            <div class="in-num">+250M</div>
+            <div class="in-label">personas en brecha digital</div>
+          </div>
+          <div class="in-item">
+            <div class="in-num">7</div>
+            <div class="in-label">módulos interactivos</div>
+          </div>
+          <div class="in-item">
+            <div class="in-num">12</div>
+            <div class="in-label">emergencias resueltas</div>
+          </div>
+          <div class="in-item">
+            <div class="in-num">2</div>
+            <div class="in-label">ecosistemas (iOS/Android)</div>
+          </div>
+          <div class="in-item">
+            <div class="in-num">5</div>
+            <div class="in-label">ODS de la ONU</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact-3d-stage reveal-on-scroll" id="impact-3d-tilt" aria-hidden="true">
+        <div class="sphere-3d-ambient"></div>
+        <div class="globe-3d-container">
+          <div class="globe-ring gr-1"></div>
+          <div class="globe-ring gr-2"></div>
+          <div class="globe-ring gr-3"></div>
+          <div class="globe-ring gr-4"></div>
+          <div class="globe-equator"></div>
+          <div class="globe-core">
+            <span class="globe-core-num">100%</span>
+            <span class="globe-core-sub">Inclusión Abierta</span>
+          </div>
+          <div class="globe-node gn-1"><span>🌾 Zonas Rurales</span></div>
+          <div class="globe-node gn-2"><span>👵 Adultos Mayores</span></div>
+          <div class="globe-node gn-3"><span>🛡️ Cero Estafas</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="impact-flow-section reveal-on-scroll">
+      <div class="section-header-centered">
+        <div class="section-label">Cadena de valor</div>
+        <h2 class="section-heading">Ruta de transformación comunitaria</h2>
+      </div>
+      <div class="impact-flow-grid">
+        <div class="if-item">
+          <div class="if-n">01</div>
+          <h3>Problema detectado</h3>
+          <p>Más del 40% de la población rural latinoamericana carece de habilidades digitales básicas, generando exclusión social y económica.</p>
+        </div>
+        <div class="if-item">
+          <div class="if-n">02</div>
+          <h3>Población beneficiada</h3>
+          <p>Dirigido a quienes enfrentan mayores barreras tecnológicas:</p>
+          <div class="pop-tags">
+            <span>Comunidades rurales</span>
+            <span>Adultos mayores</span>
+            <span>Mujeres rurales</span>
+            <span>Pueblos indígenas</span>
+          </div>
+        </div>
+        <div class="if-item">
+          <div class="if-n">03</div>
+          <h3>Solución tecnológica</h3>
+          <p>Plataforma gratuita con tutoriales paso a paso, voz integrada, simuladores sin riesgo y el asistente TecnoRed IA.</p>
+        </div>
+        <div class="if-item highlight">
+          <div class="if-n">04</div>
+          <h3>Beneficios logrados</h3>
+          <ul class="benefit-list">
+            <li>✓ Acceso a salud y trámites en línea</li>
+            <li>✓ Reducción drástica de estafas</li>
+            <li>✓ Comunicación familiar por videollamada</li>
+            <li>✓ Inclusión laboral y productiva</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-block reveal-on-scroll">
+      <div class="section-header-centered">
+        <div class="section-label">Contraste directo</div>
+        <h2 class="section-heading">Antes y después de TecnoRed</h2>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-col before">
+          <h3>✕ Sin TecnoRed</h3>
+          <ul>
+            <li>Dependencia de terceros para hacer trámites básicos</li>
+            <li>Alta vulnerabilidad ante mensajes y llamadas de estafa</li>
+            <li>Aislamiento comunicacional respecto a familiares lejanos</li>
+            <li>Exclusión de oportunidades educativas y laborales en línea</li>
+          </ul>
+        </div>
+        <div class="compare-col after">
+          <h3>✓ Con TecnoRed</h3>
+          <ul>
+            <li>Autonomía para usar el celular, correo e Internet seguro</li>
+            <li>Capacidad inmediata para detectar y bloquear fraudes</li>
+            <li>Conexión constante mediante videollamadas grupales</li>
+            <li>Apoyo permanente las 24 horas mediante TecnoRed IA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-block reveal-on-scroll">
+      <div class="section-header-centered">
+        <div class="section-label">Agenda 2030</div>
+        <h2 class="section-heading">Objetivos de Desarrollo Sostenible — ONU</h2>
+      </div>
+      <div class="ods-list">
+        <div class="ods-item" style="--oc:#0A84FF"><span class="ods-num">ODS 01</span><strong>Fin de la Pobreza</strong></div>
+        <div class="ods-item" style="--oc:#5AC8FA"><span class="ods-num">ODS 04</span><strong>Educación de Calidad</strong></div>
+        <div class="ods-item" style="--oc:#30D158"><span class="ods-num">ODS 08</span><strong>Trabajo Decente</strong></div>
+        <div class="ods-item" style="--oc:#0A84FF"><span class="ods-num">ODS 10</span><strong>Reducción de Desigualdades</strong></div>
+        <div class="ods-item" style="--oc:#5AC8FA"><span class="ods-num">ODS 17</span><strong>Alianzas para los Objetivos</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 7. TECNORED IA ════════════════ -->
+<section class="page" id="page-ia">
+  <div class="container">
+    <div class="ia-page-header reveal-on-scroll">
+      <div class="section-label">Asistente Inteligente de Inclusión Digital</div>
+      <h1>TecnoRed <span class="ia-gradient-text">IA</span></h1>
+      <p class="page-lead">Pregunta cualquier duda sobre tu celular, Internet, WhatsApp, correos o estafas. Respuestas inmediatas en lenguaje sencillo y con lectura en voz alta.</p>
+    </div>
+
+    <div class="ia-workspace reveal-on-scroll">
+      <aside class="ia-sidebar" aria-label="Temas y capacidades de la IA">
+        <div class="ia-orb-card">
+          <div class="ia-orb-visual" aria-hidden="true">
+            <div class="ia-orb-core"></div>
+            <div class="ia-orb-ring"></div>
+          </div>
+          <div class="ia-orb-meta">
+            <strong>Motor TecnoRed IA</strong>
+            <span><span class="chat-online-dot"></span> Activo · Sin costo · Privado</span>
+          </div>
+        </div>
+
+        <div class="ia-topics-block">
+          <h3>Consultas rápidas por tema</h3>
+          <div class="ia-topic-list" id="chat-suggestions">
+            <button class="chat-suggestion" data-q="¿Qué es Internet?">🌐 ¿Qué es Internet?</button>
+            <button class="chat-suggestion" data-q="¿Qué es el WiFi?">📶 Conectar al WiFi</button>
+            <button class="chat-suggestion" data-q="¿Cómo creo un correo?">✉️ Crear correo Gmail</button>
+            <button class="chat-suggestion" data-q="¿Qué es WhatsApp?">💬 Usar WhatsApp</button>
+            <button class="chat-suggestion" data-q="¿Cómo hago una videollamada?">📹 Videollamadas</button>
+            <button class="chat-suggestion" data-q="¿Cómo evito estafas?">🛡️ Evitar estafas</button>
+            <button class="chat-suggestion" data-q="¿Qué es una contraseña segura?">🔐 Contraseña segura</button>
+            <button class="chat-suggestion" data-q="¿Cómo descargo aplicaciones?">📲 Descargar apps</button>
+            <button class="chat-suggestion" data-q="Me robaron el celular">🚨 Celular robado</button>
+            <button class="chat-suggestion" data-q="¿Qué es un código QR?">📷 Escanear código QR</button>
+          </div>
+        </div>
+
+        <div class="ia-guarantees">
+          <div class="ia-g-item">🔊 <span>Toca <strong>Escuchar respuesta</strong> para que la IA te hable.</span></div>
+          <div class="ia-g-item">🔒 <span>100% seguro: nunca te pediremos contraseñas ni datos bancarios.</span></div>
+        </div>
+      </aside>
+
+      <div class="ia-chat-console" id="chat-window" role="region" aria-label="Conversación con TecnoRed IA">
+        <div class="chat-head">
+          <div class="chat-head-info">
+            <div class="chat-head-avatar" aria-hidden="true">✦</div>
+            <div>
+              <strong>Asistente TecnoRed IA</strong>
+              <span class="chat-status"><span class="chat-online-dot"></span> Especialista en educación digital</span>
+            </div>
+          </div>
+          <div class="chat-head-actions">
+            <button class="chat-action-pill" id="chat-tts-last" title="Escuchar la última respuesta en voz alta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              <span>Escuchar respuesta</span>
+            </button>
+            <button class="chat-action-pill" id="chat-clear" title="Limpiar conversación">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+              <span>Limpiar</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="chat-msgs" id="chat-messages" aria-live="polite">
+          <div class="chat-msg bot">
+            <div class="chat-bubble">
+              Hola, soy <strong>TecnoRed IA</strong>. Estoy aquí para explicarte cualquier tema de tecnología paso a paso y en palabras sencillas.<br/><br/>
+              Puedes tocar uno de los botones de la izquierda o escribir tu pregunta abajo. Por ejemplo: <em>¿Cómo hago una videollamada?</em> o <em>¿Cómo sé si un mensaje es una estafa?</em>
+            </div>
+            <span class="chat-ts">Ahora</span>
+          </div>
+        </div>
+
+        <div class="chat-input-row">
+          <input type="text" id="chat-input" class="chat-input" placeholder="Escribe tu pregunta aquí... (Ej: ¿Cómo creo mi correo?)" aria-label="Escribe tu pregunta para TecnoRed IA" maxlength="240" autocomplete="off"/>
+          <button class="chat-send-btn" id="chat-send" aria-label="Enviar pregunta">
+            <span>Enviar</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-mark" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div>
+          <strong>TecnoRed</strong>
+          <p>Inclusión digital e IA para Iberoamérica</p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>© 2026 Santiago Jacobs — Colegio San Agustín, Bolivia.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación de pie de página">
+        <button class="footer-link" data-page="inicio">Inicio</button>
+        <button class="footer-link" data-page="proyecto">Proyecto</button>
+        <button class="footer-link" data-page="plataforma">Aprende</button>
+        <button class="footer-link" data-page="emergencias">Emergencias</button>
+        <button class="footer-link" data-page="impacto">Impacto</button>
+        <button class="footer-link" data-page="ia">✦ TecnoRed IA</button>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="progress-toast" role="status" aria-live="polite" hidden>
+  <span id="toast-text">Módulo completado</span>
+</div>
+
+<!-- ACCESO RÁPIDO FLOTANTE A TECNORED IA -->
+<button class="chat-fab" id="chat-fab" aria-label="Ir a TecnoRed IA" title="Consultar a TecnoRed IA">
+  <span class="chat-fab-sparkle">✦</span>
+  <span class="chat-fab-text">IA</span>
+  <span class="chat-badge" id="chat-fab-badge"></span>
+</button>
+
+<script src="app.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>
